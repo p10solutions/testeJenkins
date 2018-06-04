@@ -1,0 +1,14 @@
+﻿@*@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor httpcontextAccessor
+
+@{
+    var areaAtual = httpcontextAccessor.HttpContext.Request.r;
+
+    string valorArea = string.Empty;
+    valorArea = areaAtual != null ? areaAtual.ToString() : "";
+}
+<input type='hidden' id='routes-diretorio-virtual' value='@HttpContext.Current.PathBase' />
+
+<input type="hidden" id="routes-controller" value="@HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString()" />
+
+<input type="hidden" id="routes-area" value="@valorArea" />*@

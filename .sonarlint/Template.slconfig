@@ -1,0 +1,11 @@
+{
+  "ServerUri": "http://localhost:9000/",
+  "Organization": null,
+  "ProjectKey": "5a.Net",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AWOyZ4SogpRWDGotVO8O",
+      "ProfileTimestamp": "2018-05-30T15:55:18-03:00"
+    }
+  }
+}

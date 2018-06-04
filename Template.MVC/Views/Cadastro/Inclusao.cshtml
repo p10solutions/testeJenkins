@@ -1,0 +1,26 @@
+﻿@model TemplateViewModel
+
+@{
+    ViewData["Titulo"] = "Template";
+    ViewData["Descricao"] = "Inclusão";
+}
+
+<div class="row">
+    <div class="col-md-12 card card-info card-outline">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Preencha todos os dados corretamente</h4>
+                    <hr />
+                    <form asp-action="Inclusao" data-ajax="true" data-ajax-method="POST" data-ajax-success="TratarRetornoSucesso" data-ajax-failure="TratarRetornoErro">
+                        @await Html.PartialAsync("_dados")
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/Views/view.js"></script>
+    <script src="~/js/Views/Template/incluirEditar.js"></script>
+}
